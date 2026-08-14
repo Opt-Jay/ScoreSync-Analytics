@@ -1,0 +1,9 @@
+sql_file_count: 15
+obsolete_league_reliability_removed: True
+duplicate_team_strength_removed: True
+canonical_evaluation_view_present: True
+destructive_database_drop_absent: True
+numeric_league_ranking: True
+result_coverage_metric_present: True
+dynamic_percentile_decisions_present: True
+dominance_precedence_removed: True
