@@ -97,6 +97,13 @@ Canonical fixture-level evaluation
 
 ## Repository Structure
 ScoreSync-Analytics/
+├── assets/
+│   └── screenshots/
+│       ├── btts-confidence-validation.png
+│       ├── confidence-tier-league-accuracy.png
+│       ├── league-btts-calibration.png
+│       ├── league-reliability-decisions.png
+│       └── monthly-model-performance.png
 │
 ├── docs/
 │   ├── analysis_flow.md
@@ -124,4 +131,38 @@ ScoreSync-Analytics/
 ├── README.md
 └── VALIDATION.txt
 
+## Example Analysis Outputs
 
+The following outputs demonstrate how the SQL analytics pipeline evaluates prediction accuracy, calibration, confidence reliability and league-level performance using completed fixture data.
+
+### BTTS League Calibration
+
+Compares the model's average predicted BTTS probability with the observed BTTS rate for each league. The calibration gap helps identify leagues where the model systematically over-predicts or under-predicts Both Teams to Score outcomes.
+
+![BTTS league calibration analysis](assets/screenshots/league-btts-calibration.png)
+
+### Confidence-Tier League Accuracy
+
+Breaks prediction performance down by confidence tier and league, making it possible to test whether higher-confidence predictions actually produce stronger observed accuracy across competitions.
+
+![Confidence-tier league accuracy](assets/screenshots/confidence-tier-league-accuracy.png)
+
+### BTTS Confidence Validation
+
+Tests whether the model's confidence hierarchy is meaningful by comparing high, medium and low confidence predictions against their realised accuracy and observed BTTS rates.
+
+![BTTS confidence validation](assets/screenshots/btts-confidence-validation.png)
+
+### League Reliability & Decision Support
+
+Combines multiple performance measures into a league-level reliability framework. The output supports decisions about which competitions have sufficient evidence and predictive reliability to monitor, prioritise or treat cautiously.
+
+![League reliability and decision analysis](assets/screenshots/league-reliability-decisions.png)
+
+### Monthly Model Performance
+
+Provides a higher-level monitoring view of completed fixtures, leagues analysed, BTTS accuracy, team-strength fulfilment, result prediction performance and high-confidence performance over time.
+
+![Monthly model performance report](assets/screenshots/monthly-model-performance.png)
+
+> **Note:** These screenshots represent analytical outputs from the project dataset at a particular point in time. Results will change as additional completed fixtures are added to the dataset.
